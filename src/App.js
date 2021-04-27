@@ -1,10 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-class App extends Component {
-  render() {
-    return <div>jhh</div>;
-  }
-}
+import { Canvas } from "@react-three/fiber";
+const App = () => {
+  return <Canvas></Canvas>;
+};
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
 export default App;
