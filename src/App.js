@@ -1,17 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Stars } from "@react-three/drei";
+import {
+  OrbitControls,
+  Stars,
+  Sphere,
+  MeshDistortMaterial,
+} from "@react-three/drei";
 import "./index.css";
-
-const Box = () => {
-  return (
-    <mesh>
-      <boxBufferGeometry attach="geometry"></boxBufferGeometry>
-      <meshLambertMaterial attach="material" color="grey"></meshLambertMaterial>
-    </mesh>
-  );
-};
 
 const App = () => {
   return (
@@ -20,7 +16,15 @@ const App = () => {
       <Stars></Stars>
       <ambientLight intensity={0.8}></ambientLight>
       <spotLight position={[9, 15, 11]} angle={0.3}></spotLight>
-      <Box></Box>
+      <Sphere visible position={[0, 0, 0]} args={[1, 16, 200]}>
+        <MeshDistortMaterial
+          color="#EB1E99"
+          attach="material"
+          distort={0.5} // Strength, 0 disables the effect (default=1)
+          speed={2} // Speed (default=1)
+          roughness={0}
+        />
+      </Sphere>
     </Canvas>
   );
 };
