@@ -1,6 +1,13 @@
 html,
 body {
-  background: #fafafa;
+  background: rgb(12, 20, 69);
+  background: linear-gradient(
+    90deg,
+    rgba(12, 20, 69, 1) 0%,
+    rgba(76, 64, 142, 1) 35%,
+    rgba(92, 84, 164, 1) 68%,
+    rgba(56, 40, 92, 1) 100%
+  );
 }
 canvas {
   width: 100%;
