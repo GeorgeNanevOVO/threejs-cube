@@ -25,6 +25,15 @@ const App = () => {
           roughness={0}
         />
       </Sphere>
+      <Sphere visible position={[0, 12, 1]} args={[1.2, 18, 300]}>
+        <MeshDistortMaterial
+          color="#EB1E99"
+          attach="material"
+          distort={0.5} // Strength, 0 disables the effect (default=1)
+          speed={4} // Speed (default=1)
+          roughness={0}
+        />
+      </Sphere>
     </Canvas>
   );
 };
