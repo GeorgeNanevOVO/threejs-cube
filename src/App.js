@@ -6,7 +6,7 @@ import {
   Stars,
   Sphere,
   MeshDistortMaterial,
-  Dodecahedron,
+  Tetrahedron,
   MeshWobbleMaterial,
 } from "@react-three/drei";
 import "./index.css";
@@ -36,9 +36,9 @@ const App = () => {
           roughness={0}
         />
       </Sphere>
-      <Dodecahedron position={[2, 8, 0]}>
-        <MeshWobbleMaterial attach="material" color="hotpink" speed={2} />
-      </Dodecahedron>
+      <Tetrahedron position={[2, 8, 0]}>
+        <MeshWobbleMaterial attach="material" color="#ADD8E6" speed={2} />
+      </Tetrahedron>
     </Canvas>
   );
 };
