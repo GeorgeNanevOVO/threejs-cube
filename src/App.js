@@ -8,13 +8,15 @@ import {
   MeshDistortMaterial,
   Tetrahedron,
   MeshWobbleMaterial,
+  MapControls,
 } from "@react-three/drei";
 import "./index.css";
 
 const App = () => {
   return (
     <Canvas>
-      <OrbitControls></OrbitControls>
+      {/* <OrbitControls></OrbitControls> */}
+      <MapControls></MapControls>
       <Stars></Stars>
       <ambientLight intensity={0.4}></ambientLight>
       <spotLight position={[6, 15, 11]} angle={0.3}></spotLight>
